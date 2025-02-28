@@ -291,3 +291,9 @@ WantedBy=multi-user.target
 [Draskov@efrei-xmg4agau1 ~]$ sudo grep -nri $(( 321 * 1024 * 1024 )) /sys/fs/cgroup/ 2>/dev/null
 /sys/fs/cgroup/system.slice/web.service/memory.max:1:336592896
 ```
+```
+[Draskov@efrei-xmg4agau1 ~]$ cat /sys/fs/cgroup/system.slice/web.service/cpu.max
+50000 100000
+[Draskov@efrei-xmg4agau1 ~]$ cat /sys/fs/cgroup/system.slice/web.service/io.max
+8:0 rbps=1000000 wbps=1000000 riops=max wiops=max
+```
